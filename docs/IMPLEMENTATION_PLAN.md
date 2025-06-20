@@ -11,48 +11,64 @@
 - Frontend:
   - [x] Basic UI setup and theme configuration
   - [x] Login/Registration pages
-  - Minimal dashboard for each role (Coordinator, Supervisor, Student, Examiner)
-  - Navigation and protected routes
+  - [x] Minimal dashboard for each role (Coordinator, Supervisor, Student, Examiner)
+  - [x] Navigation and protected routes
+  - [x] Course/CRN management UI (create, edit, delete, list)
+  - Coordinator dashboard for course/CRN management
 
-### Feature 1: User Authentication & Role Management
+### Feature 1: Advanced Authentication & User Management
 - Backend:
-  - Implement User model (roles: coordinator, supervisor, student, examiner)
-  - Set up authentication (email/password, JWT/session logic)
-  - Role-based access control
-  - User registration/login APIs
+  - [x] Password reset functionality
+  - [x] Email verification system
+  - [x] Session management and token refresh
+  - [x] Advanced role permissions and access control
+  - [x] User profile management APIs
 - Frontend:
-  - Login/Registration UI
-  - Auth state management
-  - Role-based routing and dashboard redirects
-  - Error handling for auth flows
-  - Protect routes by role
+  - [x] Password reset flow UI
+  - [x] Email verification UI
+  - [x] User profile management interface
+  - [x] Advanced role-based UI components
+  - [x] Session timeout handling
+
+### Feature X: User Account Activation via Email
+- Backend:
+  - [x] Update User model to include activationToken, activationTokenExpires, and isVerified fields
+  - [x] Generate activation token and expiry when creating a user (student, supervisor, examiner) via coordinator
+  - [x] Store activation token and expiry in the user document
+  - [x] Send activation email to user with a secure activation link
+  - [x] Create activation endpoint to verify token, set password, and activate account
+- Frontend:
+  - [x] Build activation page where users can set their password using the token
+  - [x] Show success/error messages for activation
+- Testing:
+  - [x] Test the full activation flow for all user types (student, supervisor, examiner)
 
 ### Feature 2: Course & CRN Management
 - Backend:
-  - Course model (title, description, semester, coordinator)
-  - CRN model (code, course, students, supervisors)
-  - CRUD APIs for courses and CRNs
+  - [x] Course model (title, description, semester, coordinator)
+  - [x] CRN model (code, course, students, supervisors)
+  - [x] CRUD APIs for courses and CRNs
 - Frontend:
-  - Course/CRN management UI (create, edit, delete, list)
-  - Coordinator dashboard for course/CRN management
-  - Integration with backend APIs
+  - [x] Course/CRN management UI (create, edit, delete, list)
+  - [x] Coordinator dashboard for course/CRN management
+  - [x] Integration with backend APIs
 
 ### Feature 3: Project Proposal Management
 - Backend:
-  - ProjectProposal model (title, tech stack, summary, supervisor, crn, status)
-  - APIs for proposal submission, approval/rejection
+  - [x] ProjectProposal model (title, tech stack, summary, supervisor, crn, status)
+  - [x] APIs for proposal submission, approval/rejection
 - Frontend:
-  - Supervisor dashboard for proposal submission
-  - Coordinator dashboard for proposal approval/rejection
-  - Proposal status views
+  - [x] Supervisor dashboard for proposal submission
+  - [x] Coordinator dashboard for proposal approval/rejection
+  - [x] Proposal status views
 
 ### Feature 4: Project Group & Invitation Management
 - Backend:
-  - ProjectGroup model (proposal, crn, students, invitations, status)
-  - Group formation and invitation APIs
+  - [] ProjectGroup model (proposal, crn, students, invitations, status)
+  - [] Group formation and invitation APIs
 - Frontend:
-  - Student dashboard for group formation and invitations
-  - Invitation management UI
+  - [] Student dashboard for group formation and invitations
+  - [] Invitation management UI
 
 ### Feature 5: Project Stages & Deliverables
 - Backend:
